@@ -3,7 +3,7 @@ import {View, Text, Stylesheet} from 'react-native';
 
 export default function Index() {
     return(
-        <View style={style.container} >
+        <View style={styles.container} >
             <text style={styles.paragraph}>
                 Exemplo 3
             </text>
