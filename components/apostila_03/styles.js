@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center', 
   }, 
   textButton: {
-    fontSize: 20, 
+    fontSize: 40, 
     color: '#fff', 
     textAlign: 'center', 
   }, 
   counter: {
-    borderWidth: 4, 
+    borderWidth: 1, 
     borderColor: '#9E9E9E', 
     padding: 8,  
     marginTop: 8, 
