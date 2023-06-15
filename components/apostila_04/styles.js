@@ -5,38 +5,38 @@ const styles = StyleSheet.create({
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: '#ffcdd2',         
+                     
       },
       texto: {
             fontSize: 26,
             fontWeight: 'bold',
-            color: '#b71c1c',
+            color: '#000',
       },
       txtSaida: {
             margin: 20, 
             fontSize: 22, 
             fontWeight: 'bold', 
             textAlign: 'center', 
-            color: '#E53935',     
+            color: '#F00',     
         },
         txtCampo: {
            alignSelf: 'flex-start',
            marginLeft: 60, 
            fontSize: 20, 
-           color: '#E53935',   
+           color: '#000',   
         },  
       txtEntrada: {
             borderWidth: 4, 
             textAlign: 'center', 
             fontSize: 22, 
-            borderColor: '#B71C1C', 
+            /*borderColor: '#B71C1C', */
             height: 40, 
-            color: '#E53935', 
+            color: '#000', 
             borderRadius: 10, 
             width: '70%',
             }, 
       button: {
-            backgroundColor: '#E53935', 
+            backgroundColor: '#AAA', 
             height: 40, 
             justifyContent: 'center', 
             borderRadius: 10, 
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
             }, 
       textButton: {
             fontSize: 22, 
-            color: '#FFCDD2', 
+            color: '#000', 
             textAlign: 'center', 
             
             }, 

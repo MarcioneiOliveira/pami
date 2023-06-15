@@ -1,11 +1,10 @@
-import React, { useState} from 'react';
-import { View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
+import styles from './styles'
 
-import styles from './styles';
-
-function Apostila04 () {
-
+function Apostila04_exerc() {
+      
       const [entrada1, setEntrada1] = useState ('');
       const [entrada2, setEntrada2] = useState ('');
       const [mensagem, setMensagem] = useState ('Inserir nome e sobrenome!');    
@@ -16,9 +15,15 @@ function Apostila04 () {
             setMensagem(entrada1 +' '+ entrada2);
       }
 
-    return (
-        <View style={styles.container}>
-            <Text> Exemplo 4 </Text>
+      return(
+            
+            <View style={styles.container}>
+                  <Text 
+                        style={styles.texto}
+                        >
+                              EXERCÍCIO 4
+                  </Text> 
+
                   <Text 
                         style={styles.txtSaida}
                         >
@@ -63,4 +68,4 @@ function Apostila04 () {
             </View>
       );
 }
-export default Apostila04;
+export default Apostila04_exerc;
