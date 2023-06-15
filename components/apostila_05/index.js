@@ -1,59 +1,87 @@
-import React, { useState} from 'react';
-import { Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import React, { useState } from "react";
+import {
+  Text,
+  View,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
-import styles from './styles';
+import styles from "./styles";
 
-export default function Index () {
-    const [n1, setN1] = useState(0);
-    const [n2, setN2] = useState(0);
-    const [total, setTotal] = useState(0);
-  
-    function Soma() {
-      const conta = parseInt(n1) + parseInt(n2);
-      setTotal(conta.toString());
-    }
+export default function Apostila05() {
+  const [n1, setN1] = useState(0);
+  const [n2, setN2] = useState(0);
+  const [total, setTotal] = useState(0);
 
-    return (
-        <View style={styles.container}>
-            <Text style={styles.paragraph}>
-                Exemplo 5
-            </Text>
+  function Soma() {
+    const conta = parseInt(n1) + parseInt(n2);
+    setTotal(conta.toString());
+  }
 
-            <Text style={styles.txtSaida}> Calculadora básica </Text>
+  function Subtracao() {
+    const conta = parseInt(n1) - parseInt(n2);
+    setTotal(conta.toString());
+  }
 
-            <Text style={styles.textLabel}> 1° número</Text>
-            <TextInput style={styles.txtEntrada} onChangeText={ (entrada) => setN1(entrada) }/>
+  function Divisao() {
+    const conta = parseInt(n1) / parseInt(n2);
+    setTotal(conta.toString());
+  }
+  function Multipicar() {
+    const conta = parseInt(n1) * parseInt(n2);
+    setTotal(conta.toString());
+  }
 
-            <Text style={styles.txtSaida}> + </Text>
+  return (
+    <View style={styles.container}>
+      {<Text style={styles.paragraph}>
+				Exemplo 5
+			</Text>}
 
-            <Text style={styles.textLabel}> 2° número</Text>
-            <TextInput style={styles.txtEntrada} onChangeText={ (entrada) => setN2(entrada) }/>
-            
-            <Text style={[styles.txtSaida, {margin: 0 }]}> = </Text>
+      <Text style={styles.txtSaida}> Calculadora básica </Text>
 
-            <Text style={styles.textLabel}> Total </Text>
-            <TextInput style={styles.txtEntrada} editable={false} value={total} />
+      <Text style={styles.textLabell}> 1° número </Text>
+      <TextInput
+        style={styles.txtEntrada}
+        onChangeText={(entrada) => setN1(entrada)}
+        value={n1}
+      />
 
-            <TouchableOpacity style={ styles.button} onPress={() => Soma ()}>
-                <Text style={styles.textButton}> + </Text>
-            </TouchableOpacity>
+      <Text style={styles.txtSaida}> + </Text>
 
-        </View>
-    );
+      <Text style={styles.textLabel}> 2° número </Text>
+      <TextInput
+        style={styles.txtEntrada}
+        onChangeText={(entrada) => setN2(entrada)}
+        value={n2}
+      />
+
+      <Text style={[styles.txtSaida, { margin: 0 }]}> = </Text>
+
+      <Text style={styles.textLabell}> Total </Text>
+      <TextInput style={styles.txtEntrada} editable={false} value={total} />
+      <View style={styles.botes}>
+        <TouchableOpacity style={styles.button} onPress={() => Soma()}>
+          <Text style={styles.textButton}> + </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button} onPress={() => Subtracao()}>
+          <Text style={styles.textButton}> - </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button} onPress={() => Divisao()}>
+          <Text style={styles.textButton}> / </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button} onPress={() => Multipicar()}>
+          <Text style={styles.textButton}> * </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button} onPress={() => Zerar()}>
+          <Text style={styles.textButton}> Zerar </Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 }
-
-const style = StyleSheet.create ({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        backgroundColor: '#FF80AB',
-        padding: 8,
-    },
-    paragraph: {
-        margin: 6,
-        fontSize: 18,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        color: '#C51162',
-    },
-});
